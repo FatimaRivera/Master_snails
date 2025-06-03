@@ -1,3 +1,4 @@
+#For SPAdes v4.2.0
 #!/bin/bash 
 # Within "input_dir" you should have one folder for each sample (name = base name of the sample)
 # If you have something different, you should modify "Define input file paths"
