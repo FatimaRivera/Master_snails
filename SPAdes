@@ -1,4 +1,4 @@
-#For SPAdes v4.2.0
+#For SPAdes v4.2.0 (cHECKEAR ESTE CODE PORQUE Dio oituputs raro que jaime no reconocio como archivos yalm
 #!/bin/bash 
 # Within "input_dir" you should have one folder for each sample (name = base name of the sample)
 # If you have something different, you should modify "Define input file paths"
@@ -34,3 +34,29 @@ echo "All samples have been processed."
 # for f in *.truncated.gz; do
 #   mv "$f" "${f%.truncated.gz}.truncated.fq.gz"
 # done
+
+# 
+
+#FOR THE BLAST
+#Para instalar el blast
+conda install -c bioconda blast
+
+# Create Blast DataBase, notice: you have to change -dbtype to dna or prot (see on the manual) | out can be any name
+makeblastdb -in scaffolds.fasta -dbtype nucl -out blastdb
+# Para crear un query con un genoma de referencia para blastear
+nano query
+# And do a all-by-all Blast
+blastn -db blastdb -query query -out out.txt # query is one of your mitogenomes
+
+# Ejemplo de como extraer las secuencias que hacen match
+samtools faidx scaffolds.fasta \
+NODE_513_length_3169_cov_1.954397 \
+NODE_1173_length_1940_cov_2.331885 \
+NODE_407_length_3582_cov_1.709159 \
+NODE_6242_length_877_cov_2.542416 \
+NODE_11462_length_719_cov_1.779032 \
+NODE_30388_length_537_cov_1.424658 \
+NODE_96582_length_385_cov_2.650350 \
+> scaffold_extracted.fasta
+
+#Dowload that fasta into your computer
