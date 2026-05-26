@@ -1,7 +1,8 @@
-#
+#Project Megalobulimus Mithocondrial Genome 
 
 ## Cleaning the sequences
 It is necesary to remove the adapters
+### Obtaining all the paths
 We need to get the paths of the reads for each sample, for this we run the following code,
 For the first batch:
 ```
