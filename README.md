@@ -13,12 +13,14 @@ For the second batch:
 find /data/bigexpansion/michadm/seqdata/2024-06-18_Novogene_NovaSeqX_snails_Fatima   -type f -name "*.gz" | sort -t'/' -k7,7```
 ```
 We will get a result like this:
+
 [Paths of batch 1 and 2.sh](https://github.com/FatimaRivera/Master_snails/blob/1551f7bde94be8308bcf0c88696b4ccf054f2d41/Paths_batch1_and_2.sh)
 
 https://github.com/FatimaRivera/Master_snails/blob/1551f7bde94be8308bcf0c88696b4ccf054f2d41/Paths_batch1_and_2.sh#L1-L11
 
 It is better to organize the paths by sample to make the next step easier
 
+https://github.com/FatimaRivera/Master_snails/blob/7a390d69485a201d547e85eebb10d09228109915/Paths_batch1_and_2_IN_ORDER#L1-L17
 
 
 ### 1.2 Adapter Removal
