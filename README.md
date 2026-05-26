@@ -14,7 +14,10 @@ find /data/bigexpansion/michadm/seqdata/2024-06-18_Novogene_NovaSeqX_snails_Fati
 ```
 We will get a result like this:
 [Paths of batch 1 and 2.sh] (https://github.com/FatimaRivera/Master_snails/blob/22778ee9cc12e75d6702b2b9c83fb108abc53c90/Paths%20of%20batch%201%20and%202.sh)
+
 https://github.com/FatimaRivera/Master_snails/blob/22778ee9cc12e75d6702b2b9c83fb108abc53c90/Paths%20of%20batch%201%20and%202.sh
+
+
 
 
 chmod +x run_spades.sh
