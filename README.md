@@ -1,8 +1,8 @@
-#Project Megalobulimus Mithocondrial Genome 
+# Project Megalobulimus Mithocondrial Genome 
 
-## Cleaning the sequences
+## 1. Cleaning the sequences
 It is necesary to remove the adapters
-### Obtaining all the paths
+### 1.1 Obtaining all the paths
 We need to get the paths of the reads for each sample, for this we run the following code,
 For the first batch:
 ```
@@ -13,6 +13,7 @@ For the second batch:
 find /data/bigexpansion/michadm/seqdata/2024-06-18_Novogene_NovaSeqX_snails_Fatima   -type f -name "*.gz" | sort -t'/' -k7,7```
 ```
 We will get a result like this:
+/Paths of batch 1 and 2.sh
 
 
 
