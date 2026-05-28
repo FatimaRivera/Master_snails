@@ -1,5 +1,3 @@
-
-
 ##ADAPTER REMOVAL FOR ALL SEQUENCES
 
 AdapterRemoval \
