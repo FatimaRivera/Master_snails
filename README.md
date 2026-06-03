@@ -48,7 +48,9 @@ AdapterRemoval \
 
 Set every AdapterRemoval run on:
 
-```run_adapter_removal.sh ``` 
+```
+run_adapter_removal.sh
+``` 
  
  You should get something like this:
 
@@ -56,11 +58,15 @@ https://github.com/FatimaRivera/Master_snails/blob/067d0155e0caa8690a4d790b49f18
 
 Give executable rights
 
-```chmod +x run_adapter_removal.sh```
+```
+chmod +x run_adapter_removal.sh
+```
 
 Run AdapterRemoval
 
-```./run_adapter_removal.sh```
+```
+./run_adapter_removal.sh
+```
 
 You will get something like this:
 
@@ -69,7 +75,9 @@ You will get something like this:
 
 For the next step we will need to change the format from truncated to fasta :
 
-```find . -type f -name "*.truncated" -exec sh -c 'f="{}"; mv -- "$f" "$(dirname "$f")/$(basename "${f%.truncated}").truncated.fq"' \; ```
+```
+find . -type f -name "*.truncated" -exec sh -c 'f="{}"; mv -- "$f" "$(dirname "$f")/$(basename "${f%.truncated}").truncated.fq"' \;
+```
 
 
 
@@ -79,9 +87,15 @@ For the next step we will need to change the format from truncated to fasta :
 
 First we have to install Miniconda. The first command will download the package, the second command will verify the hash integrity of the downloaded file, and the third command executes the Miniconda installer.
 
-```wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh ```
-```sha256sum Miniconda3-latest-Linux-x86_64.sh```
-```bash Miniconda3-latest-Linux-x86_64.sh```
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+ ```
+```
+sha256sum Miniconda3-latest-Linux-x86_64.sh
+```
+```
+bash Miniconda3-latest-Linux-x86_64.sh
+```
 
 Answer YES to start base automatically 
 
@@ -94,35 +108,55 @@ After installing Conda successfully, the terminal prompt will show `(base)` appe
 
 
 To check the version of conda, issue the following command:
-```conda --version```
+```
+conda --version
+```
 
 You don’t need to update Anaconda right after installation. But you might need to do it sooner or later. 
-```conda update conda```
-```conda update anaconda```
+```
+conda update conda
+```
+```
+conda update anaconda
+```
 
 Run the following commands to configure Conda channels and add Bioconda:
-```conda config --add channels conda-forge```
-```conda config --add channels bioconda```
+```
+conda config --add channels conda-forge
+```
+```
+conda config --add channels bioconda
+```
 
 Run the following command to activate the base environment:
-```conda activate base```
+```
+conda activate base
+```
 
 Verify Bioconda installation:
-```conda list bioconda```
+```
+conda list bioconda
+```
 
 
 ### 2.2 Creating an enviroment
 
 Create a new environment named `Novo`. You can choose a different name if you prefer, I will cal it `Novo` because it is where we are going to run Novoplasty
-``` conda create --name Novo ```
+``` 
+conda create --name Novo
+ ```
 
 To activate the environment
-```conda activate Novo ```   
+```
+conda activate Novo
+ ```   
 
 If everything is ok, the terminal prompt will show `(Novo)` insteaf of `(base)` at the beginning of your terminal prompt , indicating that the `(Novo)` environment is active
 
 And to deactivate use 
-```conda deactivate Novo ```
+```
+conda deactivate Novo
+ ```
 
 ### 2.3 Running Novoplasty 
 
