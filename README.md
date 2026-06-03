@@ -72,12 +72,48 @@ For the next step we will need to change the format from truncated to fasta :
 ```find . -type f -name "*.truncated" -exec sh -c 'f="{}"; mv -- "$f" "$(dirname "$f")/$(basename "${f%.truncated}").truncated.fq"' \; ```
 
 
-### 1.3 
+
+## 2. Assembly with Novoplasty
+
+### 2.1 Installing Conda
+
+First we have to install Miniconda. The first command will download the package, the second command will verify the hash integrity of the downloaded file, and the third command executes the Miniconda installer.
+
+```wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh ```
+```sha256sum Miniconda3-latest-Linux-x86_64.sh```
+```bash Miniconda3-latest-Linux-x86_64.sh```
+
+Answer YES to start base automatically 
+
+If everything worked okay we will get a message asking us to log out and log in back
 
 
-## Assembly with Novoplasty
+<img width="711" height="195" alt="image" src="https://github.com/user-attachments/assets/612e06c0-5648-4115-9c17-8af9529dcce9" />
 
 
+To check the version of conda, issue the following command:
+```conda --version```
+
+# You don’t need to update Anaconda right after installation. But you might need to do it sooner or later. 
+```conda update conda```
+```conda update anaconda```
+
+# Run the following commands to configure Conda channels and add Bioconda:
+```conda config --add channels conda-forge```
+```conda config --add channels bioconda```
+
+# Run the following command to activate the base environment:
+```conda activate base```
+
+# Verify Bioconda installation:
+```conda list bioconda```
+
+
+### 2.2 Creating an enviroment
+
+
+For this part we are going to need to have a folder with seeds 
+ 
 
 
 chmod +x run_spades.sh
