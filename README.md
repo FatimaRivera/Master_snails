@@ -85,32 +85,46 @@ First we have to install Miniconda. The first command will download the package,
 
 Answer YES to start base automatically 
 
-If everything worked okay we will get a message asking us to log out and log in back
+If everything worked okay we will get a message asking us to log out and log in back.
+After installing Conda successfully, the terminal prompt will show `(base)` appear at the beginning of your terminal prompt , indicating that the Conda base environment is active.
 
 
 <img width="711" height="195" alt="image" src="https://github.com/user-attachments/assets/612e06c0-5648-4115-9c17-8af9529dcce9" />
+<img width="349" height="25" alt="image" src="https://github.com/user-attachments/assets/9563ad5c-76f4-4949-8dbc-b8d23fe99a7f" />
 
 
 To check the version of conda, issue the following command:
 ```conda --version```
 
-# You don’t need to update Anaconda right after installation. But you might need to do it sooner or later. 
+You don’t need to update Anaconda right after installation. But you might need to do it sooner or later. 
 ```conda update conda```
 ```conda update anaconda```
 
-# Run the following commands to configure Conda channels and add Bioconda:
+Run the following commands to configure Conda channels and add Bioconda:
 ```conda config --add channels conda-forge```
 ```conda config --add channels bioconda```
 
-# Run the following command to activate the base environment:
+Run the following command to activate the base environment:
 ```conda activate base```
 
-# Verify Bioconda installation:
+Verify Bioconda installation:
 ```conda list bioconda```
 
 
 ### 2.2 Creating an enviroment
 
+Create a new environment named `Novo`. You can choose a different name if you prefer, I will cal it `Novo` because it is where we are going to run Novoplasty
+``` conda create --name Novo ```
+
+To activate the environment
+```conda activate Novo ```   
+
+If everything is ok, the terminal prompt will show `(Novo)` insteaf of `(base)` at the beginning of your terminal prompt , indicating that the `(Novo)` environment is active
+
+And to deactivate use 
+```conda deactivate Novo ```
+
+### 2.3 Running Novoplasty 
 
 For this part we are going to need to have a folder with seeds 
  
