@@ -180,7 +180,29 @@ Before running NOVOPlasty, create a folder called `00_RefGenomes` to store the F
 
 <img width="1452" height="150" alt="image" src="https://github.com/user-attachments/assets/a723671a-aa57-42e7-9a75-20b6bf432eab" />
 
-Create a folder called `02_Novo`, and inside that one create a subfolder for every sample 
+Create a folder called `02_Novo`, to store NOVOPlasty configuration files and assembly outputs.
+
+For multiple samples, assemblies can be run in batch mode using a shell script like `run_Novoplasty_configv4.3_batch.sh`  that automatically generates sample-specific configuration files and executes NOVOPlasty.
+
+https://github.com/FatimaRivera/Master_snails/blob/67e53771caf82e07be06098120d0a8c761ba04c5/run_Novoplasty_configv4.3_batch.sh#L3-L62
+
+
+Give executable rights
+```
+chmod +x run_Novoplasty_configv4.3_batch.sh
+```
+
+Activate the environment
+```
+conda activate Novo
+```
+
+Run NovoPlasty
+```
+./run_Novoplasty_configv4.3_batch.sh
+```
+
+
 
 ```
 mkdir FR{01..68}
