@@ -28,7 +28,7 @@ https://github.com/FatimaRivera/Master_snails/blob/067d0155e0caa8690a4d790b49f18
 
 ### 1.2 Adapter Removal
 
-Create a folder for the clean reads called 01_CleanData
+Create a folder for the clean reads called `01_CleanData`
 
 
 <img width="717" height="43" alt="image" src="https://github.com/user-attachments/assets/6edff0bb-0595-478d-a42a-5f86dae2d96a" />
@@ -157,11 +157,43 @@ And to deactivate use
 ```
 conda deactivate Novo
  ```
+### 2.3 Installing Novoplasty
 
-### 2.3 Running Novoplasty 
+Inside the enviroment Novo, we run the following command:
 
-For this part we are going to need to have a folder with seeds 
- 
+```
+conda install -c bioconda novoplasty
+```
+<img width="1147" height="279" alt="image" src="https://github.com/user-attachments/assets/600ff647-ccf4-4b8f-8aa0-ed9ccb761dc7" />
+
+We can check the version of Novoplasty by running the command:
+```
+conda list novoplasty
+```
+
+<img width="987" height="120" alt="image" src="https://github.com/user-attachments/assets/a9ec453f-700b-4283-9734-731c51082256" />
+
+
+### 2.4 Running Novoplasty 
+
+Before running NOVOPlasty, create a folder called `00_RefGenomes` to store the FASTA files that will be used as seed sequences. NOVOPlasty cannot begin the assembly without a seed sequence, as it uses this sequence to locate relevant reads and start extending the genome assembly. Having a dedicated folder keeps all seed files organized and makes it easier to run multiple assemblies. 
+
+<img width="1452" height="150" alt="image" src="https://github.com/user-attachments/assets/a723671a-aa57-42e7-9a75-20b6bf432eab" />
+
+Create a folder called `02_Novo`, and inside that one create a subfolder for every sample 
+
+```
+mkdir FR{01..68}
+```
+
+You should have something like this:
+
+<img width="1203" height="147" alt="image" src="https://github.com/user-attachments/assets/acd8245c-b79c-4c3f-8ee3-07df722c54d9" />
+
+
+
+
+
 
 
 chmod +x run_spades.sh
