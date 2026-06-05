@@ -40,8 +40,8 @@ Insert size           = 300
 Platform              = illumina
 Single/Paired         = PE
 Combined reads        = 
-Forward reads         = $SOURCE_DIR/$sample_name.pair1.truncated.fq.gz
-Reverse reads         = $SOURCE_DIR/$sample_name.pair2.truncated.fq.gz
+Forward reads         = $SOURCE_DIR/$sample_name.pair1.truncated.fq
+Reverse reads         = $SOURCE_DIR/$sample_name.pair2.truncated.fq
 Store Hash            =
 
 Heteroplasmy:
