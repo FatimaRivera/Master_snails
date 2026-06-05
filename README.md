@@ -174,12 +174,18 @@ conda list novoplasty
 <img width="987" height="120" alt="image" src="https://github.com/user-attachments/assets/a9ec453f-700b-4283-9734-731c51082256" />
 
 
-### 2.4 Running Novoplasty 
+### 2.4 Preparing Reference sequences
 
 Before running NOVOPlasty, create a folder called `00_RefGenomes` to store the FASTA files that will be used as seed sequences. NOVOPlasty cannot begin the assembly without a seed sequence, as it uses this sequence to locate relevant reads and start extending the genome assembly. Having a dedicated folder keeps all seed files organized and makes it easier to run multiple assemblies. 
 
+```
+mkdir 00_RefGenomes
+```
+
 <img width="1452" height="150" alt="image" src="https://github.com/user-attachments/assets/a723671a-aa57-42e7-9a75-20b6bf432eab" />
 
+
+### 2.5 Generating NOVOPlasty Configuration Files
 Create a folder called `02_Novo`, to store NOVOPlasty configuration files and assembly outputs.
 
 ```
@@ -198,12 +204,23 @@ chmod +x run_generate_config_batch.sh
 Run the command
 ```
 ./run_generate_config_batch.sh
+```
+
+### 2.6 Assigning Seed Sequences
+
+Update the `Seed Input` field with the path to the appropriate reference sequence in `00_RefGenomes`. Repeat this step for all samples, ensuring that each sample is assigned a seed sequence from the corresponding species or the closest available relative.
+
+```
+cd FR1 && nano config.txt
+```
+For example: 
+<img width="1041" height="347" alt="image" src="https://github.com/user-attachments/assets/7846598a-2bdd-4c9d-962e-3a5d1345457e" />
 
 
+### 2.7 Running NOVOPlasty
 
-
-
-
+Once all configuration files `config.txt` have been reviewed and the appropriate seed sequence has been assigned to each sample, NOVOPlasty can be executed in batch mode using [`run_Novoplasty.sh`](https://github.com/FatimaRivera/Master_snails/blob/5d26e48acb69f55901bffb635460b85dc9378b6a/run_novoplasty.sh).
+The script iterates through all sample-specific config.txt files and runs NOVOPlasty for each one. If an error occurs during the assembly of a sample, the script stops execution and reports the failed configuration file. Successfully completed assemblies are stored in their corresponding sample directories.
 
 Activate the environment
 ```
