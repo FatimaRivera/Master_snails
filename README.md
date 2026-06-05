@@ -182,15 +182,28 @@ Before running NOVOPlasty, create a folder called `00_RefGenomes` to store the F
 
 Create a folder called `02_Novo`, to store NOVOPlasty configuration files and assembly outputs.
 
-For multiple samples, assemblies can be run in batch mode using a shell script like `run_Novoplasty_configv4.3_batch.sh`  that automatically generates sample-specific configuration files and executes NOVOPlasty.
+```
+mkdir 02_Novo
+```
 
-https://github.com/FatimaRivera/Master_snails/blob/67e53771caf82e07be06098120d0a8c761ba04c5/run_Novoplasty_configv4.3_batch.sh#L3-L62
+For multiple samples, NOVOPlasty can be prepared in batch mode using the script `run_generate_config_batch.sh` below. The script identifies all samples in the `01_CleanData` directory, creates a dedicated output folder for each sample, and automatically generates the corresponding NOVOPlasty configuration file `config.txt` . This approach avoids manual editing of configuration files and ensures consistency across assemblies.
 
+https://github.com/FatimaRivera/Master_snails/blob/39d2907cf86e6c9d0aea2c730e286ae1ed1feed2/run_generate_config_batch.sh#L3-L62
 
 Give executable rights
 ```
-chmod +x run_Novoplasty_configv4.3_batch.sh
+chmod +x run_generate_config_batch.sh
 ```
+
+Run the command
+```
+./run_generate_config_batch.sh
+
+
+
+
+
+
 
 Activate the environment
 ```
