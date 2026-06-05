@@ -220,7 +220,7 @@ For example:
 ### 2.7 Running NOVOPlasty
 
 Once all configuration files `config.txt` have been reviewed and the appropriate seed sequence has been assigned to each sample, NOVOPlasty can be executed in batch mode using [`run_Novoplasty.sh`](https://github.com/FatimaRivera/Master_snails/blob/5d26e48acb69f55901bffb635460b85dc9378b6a/run_novoplasty.sh).
-The script iterates through all sample-specific config.txt files and runs NOVOPlasty for each one. If an error occurs during the assembly of a sample, the script stops execution and reports the failed configuration file. Successfully completed assemblies are stored in their corresponding sample directories.
+The script iterates through all sample-specific `config.txt` files and runs NOVOPlasty for each one. If an error occurs during the assembly of a sample, the script stops execution and reports the failed configuration file. Successfully completed assemblies are stored in their corresponding sample directories.
 
 Activate the environment
 ```
@@ -236,6 +236,45 @@ Run NovoPlasty
 ```
 ./run_Novoplasty.sh
 ```
+
+### 2.8 Evaluating Assembly Success
+
+After all NOVOPlasty runs have completed, the log files can be summarized to identify which assemblies successfully circularized and which may require additional inspection.
+
+Merge all log files
+
+The following script collects the relevant information from the individual sample directories and combines the NOVOPlasty log files into a single file:
+
+```
+chmod +x run_merge_log.sh
+```
+```
+./run_merge_log.sh
+```
+
+This step generates:
+
+merge_log.fasta
+Generate a summary table
+
+Next, run the summarization script:
+
+python run_summarize_log.py
+
+The script extracts key assembly statistics from the merged log file and exports them to:
+
+summary.csv
+
+The resulting spreadsheet can be used to quickly identify:
+
+Successful circularized assemblies
+Incomplete assemblies
+Samples requiring manual inspection or reassembly
+
+
+scp -r mdrivera@vm-srv-astbury.vm.ntnu.no:/data/bigexpansion/fatima/04_Novo_2nd/summary.csv /mnt/c/Users/lenovo/Downloads/
+
+
 
 
 
