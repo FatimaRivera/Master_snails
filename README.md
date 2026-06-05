@@ -210,9 +210,14 @@ Activate the environment
 conda activate Novo
 ```
 
+Give executable rights
+```
+chmod +x run_Novoplasty.sh
+```
+
 Run NovoPlasty
 ```
-./run_Novoplasty_configv4.3_batch.sh
+./run_Novoplasty.sh
 ```
 
 
