@@ -280,52 +280,28 @@ After identifying the successfully circularized assemblies, the corresponding mi
 
 #### Merge assembled mitogenomes
 
-Run the following script:
+Run the following script `[run_merged_fasta.sh](https://github.com/FatimaRivera/Master_snails/blob/7b9e80f9f7a515ad5ceabb343143cc548b884f1c/run_merged_fasta.sh)` :
 
-```bash id="k53h2j"
+```
 chmod +x run_merge_fasta.sh
 ./run_merge_fasta.sh
 ```
 
-The script collects the assembled mitogenome sequences from all sample directories and merges them into a single file:
-
-```text id="ixhv1q"
-merged.fasta
-```
+The script collects the assembled mitogenome sequences from all sample directories and merges them into a single file called `merged.fasta`
 
 #### Download the merged FASTA file
 
 Once the file has been generated, transfer it from the server to your local computer using `scp`:
 
-```bash id="qv9bgj"
+```
 scp username@server:/path/to/merged.fasta .
 ```
 
 For example:
 
-```bash id="d2dmbh"
-scp jaimegm@vm-srv-astbury.vm.ntnu.no:/home/shomeb/j/jaimegm/data/bigexpansion/fatima/04_Novo_2nd/merged.fasta .
+```
+scp mdrivera@vm-srv-astbury.vm.ntnu.no:/data/bigexpansion/fatima/04_Novo_2nd/merged.fasta /mnt/c/Users/lenovo/Downloads/
 ```
 
 The resulting `merged.fasta` file contains all assembled mitogenomes and can be used for downstream analyses such as annotation, alignment, and phylogenetic reconstruction.
 
-
-
-```
-mkdir FR{01..68}
-```
-
-You should have something like this:
-
-<img width="1203" height="147" alt="image" src="https://github.com/user-attachments/assets/acd8245c-b79c-4c3f-8ee3-07df722c54d9" />
-
-
-
-
-
-
-
-chmod +x run_spades.sh
-
-# Ejecuta:
-./run_spades.sh
