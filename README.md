@@ -241,7 +241,7 @@ Run NovoPlasty
 
 After all NOVOPlasty runs have completed, the log files can be summarized to identify which assemblies successfully circularized and which may require additional inspection.
 
-**Merge all log files**
+#### Merge all log files
 
 The following script [`run_merge_log.sh`](https://github.com/FatimaRivera/Master_snails/blob/5de299e49505e8ef3371ff52e37ee6d3e5722c70/run_merge_log.sh) collects the relevant information from the individual sample directories and combines the NOVOPlasty log files into a single file:
 
@@ -254,7 +254,7 @@ chmod +x run_merge_log.sh
 
 This step generates the file `merge_log.fasta` 
 
-**Generate a summary table**
+#### Generate a summary table
 
 Next, run the summarization script `[run_summarize_log.py](https://github.com/FatimaRivera/Master_snails/blob/ccba35674d3ec6bf81921fdb0027a40cdf74edef/run_summarize_log.py)` :
 
