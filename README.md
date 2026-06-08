@@ -243,7 +243,7 @@ After all NOVOPlasty runs have completed, the log files can be summarized to ide
 
 Merge all log files
 
-The following script collects the relevant information from the individual sample directories and combines the NOVOPlasty log files into a single file:
+The following script [`run_merge_log.sh`](https://github.com/FatimaRivera/Master_snails/blob/5de299e49505e8ef3371ff52e37ee6d3e5722c70/run_merge_log.sh) collects the relevant information from the individual sample directories and combines the NOVOPlasty log files into a single file:
 
 ```
 chmod +x run_merge_log.sh
@@ -252,14 +252,15 @@ chmod +x run_merge_log.sh
 ./run_merge_log.sh
 ```
 
-This step generates:
+This step generates the file `merge_log.fasta` 
 
-merge_log.fasta
 Generate a summary table
 
 Next, run the summarization script:
 
+```
 python run_summarize_log.py
+```
 
 The script extracts key assembly statistics from the merged log file and exports them to:
 
