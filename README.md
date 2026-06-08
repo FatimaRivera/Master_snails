@@ -262,20 +262,52 @@ Next, run the summarization script `[run_summarize_log.py](https://github.com/Fa
 python run_summarize_log.py
 ```
 
-The script extracts key assembly statistics from the merged log file and exports them to:
-
-summary.csv
-
+The script extracts key assembly statistics from the merged log file and exports them to a filled called `summary.csv`
 The resulting spreadsheet can be used to quickly identify:
+-Successful circularized assemblies
+-Incomplete assemblies
+-Samples requiring manual inspection or reassembly
 
-Successful circularized assemblies
-Incomplete assemblies
-Samples requiring manual inspection or reassembly
+Logging out of the server and usign the following code we could download the spreadsheet to our computer:
 
-
+```
 scp -r mdrivera@vm-srv-astbury.vm.ntnu.no:/data/bigexpansion/fatima/04_Novo_2nd/summary.csv /mnt/c/Users/lenovo/Downloads/
+```
 
+### 2.9 Exporting Circularized Mitogenomes
 
+After identifying the successfully circularized assemblies, the corresponding mitochondrial genome sequences can be combined into a single FASTA file.
+
+#### Merge assembled mitogenomes
+
+Run the following script:
+
+```bash id="k53h2j"
+chmod +x run_merge_fasta.sh
+./run_merge_fasta.sh
+```
+
+The script collects the assembled mitogenome sequences from all sample directories and merges them into a single file:
+
+```text id="ixhv1q"
+merged.fasta
+```
+
+#### Download the merged FASTA file
+
+Once the file has been generated, transfer it from the server to your local computer using `scp`:
+
+```bash id="qv9bgj"
+scp username@server:/path/to/merged.fasta .
+```
+
+For example:
+
+```bash id="d2dmbh"
+scp jaimegm@vm-srv-astbury.vm.ntnu.no:/home/shomeb/j/jaimegm/data/bigexpansion/fatima/04_Novo_2nd/merged.fasta .
+```
+
+The resulting `merged.fasta` file contains all assembled mitogenomes and can be used for downstream analyses such as annotation, alignment, and phylogenetic reconstruction.
 
 
 
