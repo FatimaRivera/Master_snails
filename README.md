@@ -305,3 +305,21 @@ scp mdrivera@vm-srv-astbury.vm.ntnu.no:/data/bigexpansion/fatima/04_Novo_2nd/mer
 
 The resulting `merged.fasta` file contains all assembled mitogenomes and can be used for downstream analyses such as annotation, alignment, and phylogenetic reconstruction.
 
+### 2.10 Dealing with Problematic Samples
+
+
+Not all samples will produce a circularized mitogenome during the initial NOVOPlasty run. After reviewing the assembly logs, problematic samples can be reprocessed using the following strategies:
+
+#### Multiple Contigs Produced
+
+If NOVOPlasty produces several contigs instead of a circularized genome, identify the longest contig and use it as a new seed sequence. Re-run NOVOPlasty with the updated seed and a reduced `k-mer size (K-mer = 21)`.
+
+#### Invalid or Ineffective Seed Sequence
+
+If the assembly fails due to an unsuitable seed sequence, select an alternative seed from a closely related species and re-run the assembly.
+
+#### Persistent Assembly Failure
+
+If changing the seed sequence does not improve the assembly, re-examine the sequencing data. Some samples may require reprocessing of the raw reads or the use of alternative cleaned read files before attempting a new assembly.
+
+Repeat the assembly process until a circularized mitogenome is obtained or until all reasonable assembly strategies have been exhausted.
