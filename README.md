@@ -256,7 +256,7 @@ This step generates the file `merge_log.fasta`
 
 #### Generate a summary table
 
-Next, run the summarization script `[run_summarize_log.py](https://github.com/FatimaRivera/Master_snails/blob/ccba35674d3ec6bf81921fdb0027a40cdf74edef/run_summarize_log.py)` :
+Next, run the summarization script [`run_summarize_log.py`](https://github.com/FatimaRivera/Master_snails/blob/ed1682c9c40320d262dd1da67f9c53af3458ec9e/run_summarize_log.py) :
 
 ```
 python run_summarize_log.py
@@ -280,7 +280,7 @@ After identifying the successfully circularized assemblies, the corresponding mi
 
 #### Merge assembled mitogenomes
 
-Run the following script `[run_merged_fasta.sh](https://github.com/FatimaRivera/Master_snails/blob/7b9e80f9f7a515ad5ceabb343143cc548b884f1c/run_merged_fasta.sh)` :
+Run the following script [`run_merged_fasta.sh`](https://github.com/FatimaRivera/Master_snails/blob/ed1682c9c40320d262dd1da67f9c53af3458ec9e/run_merged_fasta.sh) :
 
 ```
 chmod +x run_merge_fasta.sh
