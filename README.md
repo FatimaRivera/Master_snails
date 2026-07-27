@@ -355,9 +355,34 @@ Run the script
 bash run_spades.sh
 ```
 
+You will get a result like this
+
+<img width="1024" height="101" alt="image" src="https://github.com/user-attachments/assets/f9f37840-b46e-4437-b863-65199f6dbec5" />
+
+
+
+ we will use the file `contigs.fasta` to run Kraken in the next step
+
 # 4. Kraken 2
 
+Create a folder for the outputs `08_Kraken` 
 
+```
+mkdir 08_Kraken
+```
+
+activate
+```
+conda activate /data/bigexpansion/jaime/localbin/conda/envs/kraken2
+```
+
+run the code
+```
+kraken2 --db  /data/bigexpansion/vanessa/kraken_database/ncbi_nt /data/bigexpansion/fatima/03_Spades/FR1/contigs.fasta  \
+--output /data/bigexpansion/fatima/08_Kraken/FR1_kraken_output.txt \
+--report /data/bigexpansion/fatima/08_Kraken/FR1_kraken_report.txt \
+--threads 20
+```
 
 # 5. Paleomix
 
