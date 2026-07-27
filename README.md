@@ -355,6 +355,12 @@ Run the script
 bash run_spades.sh
 ```
 
+# 4. Kraken 2
 
+
+
+# 5. Paleomix
+
+# 6. tRNA 
 
 
