@@ -41,8 +41,6 @@ done
 
 echo "All samples have been processed."
 
-
-
 #### If your sample are not in the right extension:
 
 # for f in *.truncated.gz; do
