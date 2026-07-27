@@ -324,3 +324,37 @@ If changing the seed sequence does not improve the assembly, re-examine the sequ
 
 Repeat the assembly process until a circularized mitogenome is obtained or until all reasonable assembly strategies have been exhausted.
    
+# 3. SPAdes Genome Assembler
+
+For installation check https://ablab.github.io/spades/installation.html
+
+Create a folder for the outputs
+
+```
+mkdir 03_Spades
+```
+
+
+To run one sample , in this example it would be the sample FR1
+
+```
+spades.py --only-assembler -m 450 -t 14  -k 21,33,55,77,99 \
+--pe1-1 /data/bigexpansion/fatima/01_CleanData/FR1.pair1.truncated.fq  \
+--pe1-2 /data/bigexpansion/fatima/01_CleanData/FR1.pair2.truncated.fq  \
+-o /data/bigexpansion/fatima/03_Spades/FR1
+```
+
+For multiple samples, Spades can be prepared in batch mode using the script `run_spades.sh` below.
+
+https://github.com/FatimaRivera/Master_snails/blob/f4a7901e67beb7720dfd30c8868985861234707b/run_spades.sh#L3-L48
+
+
+Run the script
+
+```
+bash run_spades.sh
+```
+
+
+
+
