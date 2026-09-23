@@ -383,6 +383,9 @@ kraken2 --db  /data/bigexpansion/vanessa/kraken_database/ncbi_nt /data/bigexpans
 --report /data/bigexpansion/fatima/08_Kraken/FR1_kraken_report.txt \
 --threads 20
 ```
+you will get a result like this:
+
+<img width="1455" height="301" alt="image" src="https://github.com/user-attachments/assets/b1cfc349-7eee-44b3-8cff-425c20abfd89" />
 
 # 5. Paleomix
 
