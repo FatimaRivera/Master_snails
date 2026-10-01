@@ -387,6 +387,20 @@ you will get a result like this:
 
 <img width="1455" height="301" alt="image" src="https://github.com/user-attachments/assets/b1cfc349-7eee-44b3-8cff-425c20abfd89" />
 
+For multiple samples, Kraken can be prepared in batch mode using the script 'run_spades.sh' below.
+
+https://github.com/FatimaRivera/Master_snails/blob/76b5f2269d01ae7745b7878a0033feb0f9a7c8f4/run_kraken.sh#L1-L27
+
+Run the script
+
+```
+chmod +x run_kraken.sh
+```
+```
+./run_kraken.sh
+```
+
+
 # 5. Paleomix
 
 # 6. tRNA 
