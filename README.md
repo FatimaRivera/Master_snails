@@ -400,6 +400,17 @@ chmod +x run_kraken.sh
 ./run_kraken.sh
 ```
 
+We need to download the 'report files' to be able to input them in R for making visualization graphics
+
+We can use this command on our own terminal to download all the files from our folder '08_Kraken' from the server to our computer
+
+```
+scp mdrivera@vm-srv-astbury.vm.ntnu.no:/data/bigexpansion/fatima/08_Kraken/* /mnt/c/Users/lenovo/Downloads/
+```
+or this to download a specific file 
+```
+scp mdrivera@vm-srv-astbury.vm.ntnu.no:/data/bigexpansion/fatima/08_Kraken/FR43_kraken_report.txt /mnt/c/Users/lenovo/Downloads/
+```
 
 # 5. Paleomix
 
